@@ -36,12 +36,12 @@ const TaskItem = ({ task, onEdit }) => {
 									className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
 								/>
 								<svg viewBox="0 0 35.6 35.6" className="h-5 w-5">
-								<circle
-									r="17.8"
-									cy="17.8"
-									cx="17.8"
-									className="fill-gray-300 transition-all duration-500 ease-in-out group-has-checked:fill-primary"
-								/>
+									<circle
+										r="17.8"
+										cy="17.8"
+										cx="17.8"
+										className="fill-gray-300 transition-all duration-500 ease-in-out group-has-checked:fill-black"
+									/>
 
 									<circle
 										r="14.37"
