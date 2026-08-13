@@ -19,7 +19,7 @@ const SearchInput = () => {
 				onChange={(event) =>
 					dispatch(setFilters({ searchQuery: event.target.value }))
 				}
-				className="w-full rounded-md border bg-white p-2 pl-10 transition-all duration-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-200 focus:outline-none"
+				className="w-full rounded-md border bg-card p-2 pl-10 transition-all duration-200 focus:border-ring focus:ring-4 focus:ring-ring/20 focus:outline-none"
 			/>
 		</div>
 	);

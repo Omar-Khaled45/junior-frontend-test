@@ -29,12 +29,12 @@ const Filter = () => {
 	const filters = useSelector((state) => state.tasks.filters);
 
 	return (
-		<div className="my-7 flex gap-3">
-			<div className="flex items-center space-x-2">
+		<div className="my-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+			<div className="flex shrink-0 items-center space-x-2">
 				<Funnel size={16} />
-				<span class="font-bold">Filters:</span>
+				<span className="font-bold">Filters:</span>
 			</div>
-			<div className="flex flex-1 flex-wrap gap-1">
+			<div className="grid flex-1 grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
 				<CustomSelect
 					options={statusFilters}
 					value={filters.status}

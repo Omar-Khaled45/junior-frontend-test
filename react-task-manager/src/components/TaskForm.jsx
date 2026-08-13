@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import CustomSelect from "./CustomSelect";
 import CustomButton from "./CustomButton";
 import { useState } from "react";
@@ -56,8 +57,15 @@ const TaskForm = ({ task, onClose }) => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className="w-full max-w-4xl rounded-2xl border border-gray-300 bg-white p-8 shadow-lg"
+			className="bg-card text-card-foreground relative max-h-full w-full max-w-4xl overflow-y-auto rounded-2xl border p-8 shadow-xl"
 		>
+			<button
+				type="button"
+				onClick={onClose}
+				className="text-muted-foreground hover:bg-accent hover:text-foreground absolute top-3 right-4 cursor-pointer rounded-md p-2 transition-colors"
+			>
+				<X size={20} />
+			</button>
 			<h2 className="text-accent-foreground mb-7 text-2xl font-medium">
 				{task ? "Edit Task" : "Add New Task"}
 			</h2>
@@ -78,7 +86,7 @@ const TaskForm = ({ task, onClose }) => {
 					onChange={(event) =>
 						setFormData({ ...formData, title: event.target.value })
 					}
-					className="h-10 w-full rounded-lg border border-gray-200 px-4 text-base text-gray-800 transition outline-none placeholder:text-gray-500 focus:border-gray-400 focus:ring-2 focus:ring-gray-100"
+					className="bg-background text-foreground placeholder:text-muted-foreground focus:border-ring focus:ring-ring/20 h-10 w-full rounded-lg border px-4 text-base transition outline-none focus:ring-2"
 					required
 				/>
 			</div>
@@ -99,7 +107,7 @@ const TaskForm = ({ task, onClose }) => {
 					onChange={(event) =>
 						setFormData({ ...formData, description: event.target.value })
 					}
-					className="w-full rounded-md border bg-white p-2 transition-all duration-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-200 focus:outline-none"
+					className="bg-background focus:border-ring focus:ring-ring/20 w-full rounded-md border p-2 transition-all duration-200 focus:ring-4 focus:outline-none"
 				/>
 			</div>
 
@@ -144,7 +152,7 @@ const TaskForm = ({ task, onClose }) => {
 							onChange={(event) =>
 								setFormData({ ...formData, dueDate: event.target.value })
 							}
-							className="w-full rounded-md border bg-white p-2 transition-all duration-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-200 focus:outline-none"
+							className="bg-background focus:border-ring focus:ring-ring/20 w-full rounded-md border p-2 scheme-dark transition-all duration-200 focus:ring-4 focus:outline-none"
 							required
 						/>
 					</div>
