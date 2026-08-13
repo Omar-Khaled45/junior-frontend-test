@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Check, ChevronDown } from "lucide-react";
 
-const CustomSelect = ({ options }) => {
+const CustomSelect = ({ options, value, onChange }) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [selectedOption, setSelectedOption] = useState(options[0]);
+	const selectedOption =
+		options.find((option) => option.value === value) || options[0];
 
 	const handleSelect = (option) => {
-		setSelectedOption(option);
+		onChange?.(option.value);
 		setIsOpen(false);
 	};
 

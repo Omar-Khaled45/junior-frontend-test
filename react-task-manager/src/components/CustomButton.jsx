@@ -9,12 +9,14 @@ const variants = {
 const CustomButton = ({
 	children,
 	onClick,
+	type = "button",
 	variant = "primary",
 	icon: Icon,
 	className = "",
 }) => {
 	return (
 		<button
+			type={type}
 			onClick={onClick}
 			className={`flex cursor-pointer items-center justify-center gap-2 rounded-md px-3 py-2 transition duration-150 ${variants[variant]} ${className}`}
 		>
