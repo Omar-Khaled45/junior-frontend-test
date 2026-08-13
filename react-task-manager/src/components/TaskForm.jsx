@@ -57,7 +57,7 @@ const TaskForm = ({ task, onClose }) => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className="bg-card text-card-foreground relative max-h-full w-full max-w-4xl overflow-y-auto rounded-2xl border p-8 shadow-xl"
+			className="bg-card text-card-foreground relative max-h-full w-full max-w-4xl rounded-2xl border p-8 shadow-xl"
 		>
 			<button
 				type="button"
